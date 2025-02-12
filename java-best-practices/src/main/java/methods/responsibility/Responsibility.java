@@ -1,4 +1,4 @@
-package methods;
+package methods.responsibility;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -18,6 +18,7 @@ public class Responsibility {
 
         System.out.println("\n-- GOOD PRACTICE --");
         showGoodPractice();
+
     }
 
     private static void showBadPractice() {
@@ -28,8 +29,11 @@ public class Responsibility {
 
     private static void showGoodPractice() {
         GoodCustomerAccount account = new GoodCustomerAccount(UUID.randomUUID().toString(), BigDecimal.valueOf(100.0));
+        account.showAmount();
         account.withdraw(BigDecimal.valueOf(10.0));
+        account.showAmount();
         account.deposit(BigDecimal.valueOf(50.0));
+        account.showAmount();
     }
 
 }

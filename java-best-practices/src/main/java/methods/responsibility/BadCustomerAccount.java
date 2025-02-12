@@ -1,4 +1,4 @@
-package methods;
+package methods.responsibility;
 
 import java.math.BigDecimal;
 

@@ -1,4 +1,4 @@
-package methods;
+package methods.responsibility;
 
 import java.math.BigDecimal;
 
@@ -22,5 +22,9 @@ public class GoodCustomerAccount {
             throw new IllegalArgumentException("Insufficient balance! balance=" + this.balance + " , amount=" + amount);
         }
         this.balance = this.balance.subtract(amount);
+    }
+
+    public void showAmount(){
+        System.out.println(this.balance);
     }
 }
